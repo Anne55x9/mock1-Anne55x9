@@ -38,13 +38,29 @@ namespace MockExamProgBrushUp_ASW
         #endregion
 
         /// <summary>
-        /// Konstruktor til klassen Owner med en lokal parameter.
+        /// Overloaded konstruktor med en lokal parameter Adresse.
         /// </summary>
         /// <param name="address"></param>
 
         public Owner(String address)
         {
             this.Address = address;
+            
+        }
+
+        /// <summary>
+        ///  Overloaded konstruktor med loakl parametrene adresse og navn.
+        ///  Jeg har valgt at udvide konstruktoren fremfor at ænsre på den overnfor.
+        ///  Dette gøres for ikke at skulle tilbage og rette i test undervejs. 
+        /// </summary>
+        /// <param name="address"></param>
+        /// <param name="name"></param>
+
+
+        public Owner(String address, String name)
+        {
+            this.Address = address;
+            this.Name = name;
         }
 
         //Metoder til constraints på de forskellige attributter. 
