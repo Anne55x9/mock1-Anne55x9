@@ -37,6 +37,16 @@ namespace MockExamProgBrushUp_ASW
 
         #endregion
 
+        #region Klassens forskellige konstruktører, default og 3 overloadede så test ikke skal ændres på undervejs i kodningen.
+
+        /// <summary>
+        /// Default konstroktor.
+        /// </summary>
+        public Owner()
+        {
+
+        }
+
         /// <summary>
         /// Overloaded konstruktor med en lokal parameter Adresse.
         /// </summary>
@@ -63,8 +73,26 @@ namespace MockExamProgBrushUp_ASW
             this.Name = name;
         }
 
+        /// <summary>
+        /// Ny overloaded konstruktor med parametrene adresse, navn og endelig telefon.
+        /// Denne konstruktor laves så de nuværende kodetest ikke skal ændres på. 
+        /// </summary>
+        /// <returns></returns>
+        /// 
+
+        public Owner(String address, String name, String phone)
+        {
+            this.Address = address;
+            this.Name = name;
+            this.Phone = phone;
+        }
+
+        #endregion
+
+        #region Metoder til at begrænse input i systemet. 
+
         //Metoder til constraints på de forskellige attributter. 
-        
+
         public String GetAddress()
         {
             if (Address.Length > 6)
@@ -74,7 +102,7 @@ namespace MockExamProgBrushUp_ASW
                
             else
             {
-                throw new ArgumentException("Addressen skal være længere end 6 tegn");
+                throw new ArgumentException("Addressen skal være længere end 6 tegn.");
             }
         }
 
@@ -86,10 +114,23 @@ namespace MockExamProgBrushUp_ASW
             }
             else
             {
-                throw new ArgumentException("Navnet skal have mere end 4 tegn i sig");
+                throw new ArgumentException("Navnet skal have mere end 4 tegn i sig.");
             }
         }
 
 
+        public String GetPhone()
+        {
+            if(Phone.Length == 8)
+            {
+                return Phone;
+            }
+            else
+            {
+                throw new ArgumentException("Telefon nummeret skal være på 8 tegn.");
+            }
+        }
+
+        #endregion  
     }
 }
