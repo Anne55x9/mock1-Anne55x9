@@ -56,7 +56,7 @@ namespace MockExamProgBrushUp_ASW
         }
 
         /// <summary>
-        /// Overloaded konstruktor med en lokal parameter døre.
+        /// Overloaded konstruktor med en  parameter døre.
         /// </summary>
         /// <returns></returns>
 
@@ -66,7 +66,7 @@ namespace MockExamProgBrushUp_ASW
         }
 
         /// <summary>
-        /// overloaded konstruktor med 2 lokale parametre døre og model.
+        /// overloaded konstruktor med 2  parametre døre og model.
         /// </summary>
         /// <returns></returns>
         /// 
@@ -75,6 +75,19 @@ namespace MockExamProgBrushUp_ASW
         {
             this.Doors = doors;
             this.Model = model;
+        }
+
+        /// <summary>
+        /// overloaded konstruktor med 3 parametre døre og model.
+        /// </summary>
+        /// <returns></returns>
+        /// 
+
+        public Car(int doors, String model,String registreringsNummer)
+        {
+            this.Doors = doors;
+            this.Model = model;
+            this.RegistrationNo = registreringsNummer;
         }
 
         #endregion
@@ -102,11 +115,21 @@ namespace MockExamProgBrushUp_ASW
             }
             else
             {
-                throw new ArgumentException("Modellen navnet må ikke være tomt");
+                throw new ArgumentException("Modellen navnet må ikke være tomt.");
             }
         }
 
-
+        public String GetRegistrationNo()
+        {
+            if(RegistrationNo.Length == 7)
+            {
+                return RegistrationNo;
+            }
+            else
+            {
+                throw new ArgumentException("Registreringnummeret skal være på 7 tegn.");
+            }
+        }
        
         #endregion
     }

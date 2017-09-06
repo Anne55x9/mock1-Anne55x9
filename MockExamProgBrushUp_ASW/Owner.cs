@@ -47,7 +47,7 @@ namespace MockExamProgBrushUp_ASW
         }
 
         /// <summary>
-        /// Overloaded konstruktor med en lokal parameter Adresse.
+        /// Overloaded konstruktor med en parameter Adresse.
         /// </summary>
         /// <param name="address"></param>
 
@@ -58,7 +58,7 @@ namespace MockExamProgBrushUp_ASW
         }
 
         /// <summary>
-        ///  Overloaded konstruktor med loakl parametrene adresse og navn.
+        ///  Overloaded konstruktor med parametrene adresse og navn.
         ///  Jeg har valgt at udvide konstruktoren fremfor at ænsre på den overnfor.
         ///  Dette gøres for ikke at skulle tilbage og rette i test undervejs. 
         /// </summary>

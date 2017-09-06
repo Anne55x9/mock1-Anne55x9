@@ -93,12 +93,14 @@ namespace MockExamProgBrushUp_ASW.Tests
 
         #endregion
 
+
+        #region Test til model metoden mht model navn ikke er tomt. Plus parameter dør.
         [TestMethod()]
         public void GetModelNotNullPlusDoors4()
         {
             //Arrange
 
-            var car = new Car(4,"Volvo");
+            var car = new Car(4, "Volvo");
 
             //Act
 
@@ -107,7 +109,7 @@ namespace MockExamProgBrushUp_ASW.Tests
 
             //Assert
 
-            Assert.AreEqual(4,doors);
+            Assert.AreEqual(4, doors);
             Assert.AreEqual("Volvo", model);
         }
 
@@ -118,7 +120,7 @@ namespace MockExamProgBrushUp_ASW.Tests
         {
             //Arrange 
 
-            var car = new Car(1,"");
+            var car = new Car(1, "");
 
             //Act
 
@@ -126,5 +128,48 @@ namespace MockExamProgBrushUp_ASW.Tests
             String model = car.GetModel();
 
         }
+
+        #endregion
+
+        #region Test til registreringNummer metoden mht nummeret skal være 7. Plus parametre døre og model.
+
+        [TestMethod()]
+        public void GetRegistrationNoTest7Doors2ModelNotNull()
+        {
+            //Arrange
+
+            var car = new Car(2,"Volvo","1234567");
+
+            //Act 
+
+            int doors = car.GetDoors();
+            String model = car.GetModel();
+            String regNo = car.GetRegistrationNo();
+
+            //Assert
+
+            Assert.AreEqual(2,doors);
+            Assert.AreEqual("Volvo", model);
+            Assert.AreEqual("1234567", regNo);
+        }
+
+        [TestMethod()]
+
+        [ExpectedException(typeof(ArgumentException))]
+        public void GetMRegNoNot7Door1ModelNull()
+        {
+            //Arrange 
+
+            var car = new Car(1, "","12345");
+
+            //Act
+
+            int doors = car.GetDoors();
+            String model = car.GetModel();
+            String regNo = car.GetRegistrationNo();
+
+        }
+
+        #endregion
     }
 }
