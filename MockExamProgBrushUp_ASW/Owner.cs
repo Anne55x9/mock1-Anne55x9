@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MockExamProgBrushUp_ASW
 {
-    public class Class1
+    class Owner
     {
     }
 }
