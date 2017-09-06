@@ -51,7 +51,7 @@ namespace MockExamProgBrushUp_ASW
         
         public String GetAddress()
         {
-            if (Address.Length >= 6)
+            if (Address.Length > 6)
             {
                 return Address;
             }
@@ -59,6 +59,18 @@ namespace MockExamProgBrushUp_ASW
             else
             {
                 throw new ArgumentException("Addressen skal være længere end 6 tegn");
+            }
+        }
+
+        public String GetName()
+        {
+            if(Name.Length > 4)
+            {
+                return Name;
+            }
+            else
+            {
+                throw new ArgumentException("Navnet skal have mere end 4 tegn i sig");
             }
         }
 
