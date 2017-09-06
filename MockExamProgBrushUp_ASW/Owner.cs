@@ -90,7 +90,7 @@ namespace MockExamProgBrushUp_ASW
 
         #region Metoder til at begrænse input i systemet. 
 
-        //Metoder til constraints på de forskellige attributter. 
+        //Metoder til constraints på de forskellige attributter. Test på metoderne foretages løbende.  
 
         public String GetAddress()
         {

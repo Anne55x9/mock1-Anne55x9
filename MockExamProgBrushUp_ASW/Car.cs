@@ -44,9 +44,69 @@ namespace MockExamProgBrushUp_ASW
         }
 
         #endregion
+
+        #region Klassens forskellige konstruktører, default og 4 overloadede så test ikke skal ændres på undervejs i kodningen.
+
+        /// <summary>
+        /// Default konstruktor. 
+        /// </summary>
         public Car()
         {
 
         }
+
+        /// <summary>
+        /// Overloaded konstruktor med en lokal parameter døre.
+        /// </summary>
+        /// <returns></returns>
+
+        public Car(int doors)
+        {
+            this.Doors = doors;
+        }
+
+        /// <summary>
+        /// overloaded konstruktor med 2 lokale parametre døre og model.
+        /// </summary>
+        /// <returns></returns>
+        /// 
+
+        public Car(int doors,String model)
+        {
+            this.Doors = doors;
+            this.Model = model;
+        }
+
+        #endregion
+
+        #region Metoder til at begrænse input i systemet.
+
+        public int GetDoors()
+        {
+            if (Doors >= 2 && Doors <= 5)
+            {
+                return Doors;
+            }
+            else
+            {
+                throw new ArgumentException("Antallet af døre i bilen skal være mellem 2 og 5, begge tal inkluderet.");
+            }
+        }
+        
+
+        public String GetModel()
+        {
+            if(Model.Length != 0)
+            {
+                return Model;
+            }
+            else
+            {
+                throw new ArgumentException("Modellen navnet må ikke være tomt");
+            }
+        }
+
+       
+        #endregion
     }
 }
