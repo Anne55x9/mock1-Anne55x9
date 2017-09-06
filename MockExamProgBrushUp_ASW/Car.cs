@@ -11,13 +11,10 @@ namespace MockExamProgBrushUp_ASW
 
         #region Full properties til klassen Car med privat instance felter og public metode.
 
-        private Enum color;
+        private enum color {Black,White,Grey,Red,Green,Blue};
 
-        public Enum Color
-        {
-            get { return color; }
-            set { color = value; }
-        }
+        public String Color { get; set; }
+
 
         private int doors;
 
@@ -53,6 +50,7 @@ namespace MockExamProgBrushUp_ASW
         public Car()
         {
 
+            
         }
 
         /// <summary>
@@ -78,16 +76,30 @@ namespace MockExamProgBrushUp_ASW
         }
 
         /// <summary>
-        /// overloaded konstruktor med 3 parametre døre og model.
+        /// overloaded konstruktor med 3 parametre døre og model og registreringsnummer.
         /// </summary>
         /// <returns></returns>
         /// 
 
-        public Car(int doors, String model,String registreringsNummer)
+        public Car(int doors,String model,String registreringsNummer)
         {
             this.Doors = doors;
             this.Model = model;
             this.RegistrationNo = registreringsNummer;
+        }
+
+        /// <summary>
+        /// overloaded konstruktor med 4 parametre 
+        /// </summary>
+        /// <returns></returns>
+        /// 
+
+        public Car(int doors, String model, String registreringsNummer,String color)
+        {
+            this.Doors = doors;
+            this.Model = model;
+            this.RegistrationNo = registreringsNummer;
+            this.Color = color;
         }
 
         #endregion
@@ -130,6 +142,26 @@ namespace MockExamProgBrushUp_ASW
                 throw new ArgumentException("Registreringnummeret skal være på 7 tegn.");
             }
         }
+
+        public String GetColor()
+        {
+            color col1 = color.Black;
+            color col2 = color.Blue;
+            color col3 = color.Green;
+            color col4 = color.Grey;
+            color col5 = color.Red;
+            color col6 = color.White;
+
+            if (Color.Equals(col1) || Color.Equals(col2) ||Color.Equals(col3) || Color.Equals(col4) || Color.Equals(col5) || Color.Equals(col6))
+            {
+                return Color;
+            }
+            else
+            {
+                throw new ArgumentException("Farven kan ikke benyttes.");
+            }
+        }
+      
        
         #endregion
     }

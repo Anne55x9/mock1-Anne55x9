@@ -138,7 +138,7 @@ namespace MockExamProgBrushUp_ASW.Tests
         {
             //Arrange
 
-            var car = new Car(2,"Volvo","1234567");
+            var car = new Car(2, "Volvo", "1234567");
 
             //Act 
 
@@ -148,7 +148,7 @@ namespace MockExamProgBrushUp_ASW.Tests
 
             //Assert
 
-            Assert.AreEqual(2,doors);
+            Assert.AreEqual(2, doors);
             Assert.AreEqual("Volvo", model);
             Assert.AreEqual("1234567", regNo);
         }
@@ -160,7 +160,7 @@ namespace MockExamProgBrushUp_ASW.Tests
         {
             //Arrange 
 
-            var car = new Car(1, "","12345");
+            var car = new Car(1, "", "12345");
 
             //Act
 
@@ -171,5 +171,27 @@ namespace MockExamProgBrushUp_ASW.Tests
         }
 
         #endregion
+
+        [TestMethod()]
+        public void GetColorTest()
+        {
+            //Arrange
+
+            var car = new Car(2,"Volvo","1234567","Black");
+
+            //Act
+
+            int doors = car.GetDoors();
+            String model = car.GetModel();
+            String regNo = car.GetRegistrationNo();
+            String color = car.GetColor();
+
+            //Assert
+
+            Assert.AreEqual(2,doors);
+            Assert.AreEqual("Volvo",model);
+            Assert.AreEqual("1234567",regNo);
+            Assert.AreEqual("Black",color);
+        }
     }
 }
