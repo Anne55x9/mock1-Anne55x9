@@ -9,7 +9,7 @@ namespace MockExamProgBrushUp_ASW
     public class Car
     {
 
-        #region full properties til klassen Car med privat instance felter og public metode.
+        #region Full properties til klassen Car med privat instance felter og public metode.
 
         private Enum color;
 
