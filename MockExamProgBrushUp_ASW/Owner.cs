@@ -8,7 +8,6 @@ namespace MockExamProgBrushUp_ASW
 {
     public class Owner
     {
-
         #region Full properties til klassen Owner med privat instance felter og public metode.
 
         private String address;
