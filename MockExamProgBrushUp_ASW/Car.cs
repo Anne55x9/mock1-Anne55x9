@@ -13,7 +13,7 @@ namespace MockExamProgBrushUp_ASW
 
        
 
-        public String Color { get; set; }
+        public ColorEnum Color { get; set; }
 
 
         private int doors;
@@ -43,6 +43,7 @@ namespace MockExamProgBrushUp_ASW
                
             }
         }
+
 
         #endregion
 
@@ -99,7 +100,7 @@ namespace MockExamProgBrushUp_ASW
         /// <returns></returns>
         /// 
 
-        public Car(int doors, String model, String registreringsNummer,String color)
+        public Car(int doors, String model, String registreringsNummer,ColorEnum color)
         {
             this.Doors = doors;
             this.Model = model;
@@ -149,6 +150,7 @@ namespace MockExamProgBrushUp_ASW
             }
         }
 
+        
 
 
         #endregion
