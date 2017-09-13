@@ -37,7 +37,11 @@ namespace MockExamProgBrushUp_ASW
         public String RegistrationNo
         {
             get { return registrationNo; }
-            set { registrationNo = value; }
+            set
+            {
+                registrationNo = value;
+               
+            }
         }
 
         #endregion
@@ -49,7 +53,7 @@ namespace MockExamProgBrushUp_ASW
         /// </summary>
         public Car()
         {
-
+            GetRegistrationNo();
             
         }
 
@@ -86,6 +90,7 @@ namespace MockExamProgBrushUp_ASW
             this.Doors = doors;
             this.Model = model;
             this.RegistrationNo = registreringsNummer;
+            GetRegistrationNo();
         }
 
         /// <summary>
@@ -99,6 +104,7 @@ namespace MockExamProgBrushUp_ASW
             this.Doors = doors;
             this.Model = model;
             this.RegistrationNo = registreringsNummer;
+            
             this.Color = color;
         }
 
@@ -145,7 +151,7 @@ namespace MockExamProgBrushUp_ASW
 
         public String GetColor()
         {
-            color col1 = color.Black;
+            color col1= color.Black;
             color col2 = color.Blue;
             color col3 = color.Green;
             color col4 = color.Grey;
@@ -161,8 +167,13 @@ namespace MockExamProgBrushUp_ASW
                 throw new ArgumentException("Farven kan ikke benyttes.");
             }
         }
-      
-       
+
+
         #endregion
+
+        public override string ToString()
+        {
+            return Doors + Model + RegistrationNo;
+        }
     }
 }
