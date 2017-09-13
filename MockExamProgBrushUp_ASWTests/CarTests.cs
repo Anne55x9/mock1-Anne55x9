@@ -172,26 +172,6 @@ namespace MockExamProgBrushUp_ASW.Tests
 
         #endregion
 
-        [TestMethod()]
-        public void GetColorTest()
-        {
-            //Arrange
-
-            var car = new Car(2,"Volvo","1234567","Black");
-
-            //Act
-
-            int doors = car.GetDoors();
-            String model = car.GetModel();
-            String regNo = car.GetRegistrationNo();
-            String color = car.GetColor();
-
-            //Assert
-
-            Assert.AreEqual(2,doors);
-            Assert.AreEqual("Volvo",model);
-            Assert.AreEqual("1234567",regNo);
-            Assert.AreEqual("Black",color);
-        }
+      
     }
 }

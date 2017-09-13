@@ -11,7 +11,7 @@ namespace MockExamProgBrushUp_ASW
 
         #region Full properties til klassen Car med privat instance felter og public metode.
 
-        private enum color {Black,White,Grey,Red,Green,Blue};
+       
 
         public String Color { get; set; }
 
@@ -149,24 +149,6 @@ namespace MockExamProgBrushUp_ASW
             }
         }
 
-        public String GetColor()
-        {
-            color col1= color.Black;
-            color col2 = color.Blue;
-            color col3 = color.Green;
-            color col4 = color.Grey;
-            color col5 = color.Red;
-            color col6 = color.White;
-
-            if (Color.Equals(col1) || Color.Equals(col2) ||Color.Equals(col3) || Color.Equals(col4) || Color.Equals(col5) || Color.Equals(col6))
-            {
-                return Color;
-            }
-            else
-            {
-                throw new ArgumentException("Farven kan ikke benyttes.");
-            }
-        }
 
 
         #endregion
