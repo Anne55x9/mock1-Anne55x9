@@ -36,12 +36,24 @@ namespace MockExamProgBrushUp_ASW
 
         public String RegistrationNo
         {
-            get { return registrationNo; }
+            get
+            {
+
+                if (registrationNo.Length == 7)
+                {
+                    return registrationNo;
+                }
+                else
+                {
+
+                    throw new ArgumentException("Registreringnummeret skal være på 7 tegn.");
+                }
+            }
             set
             {
                 registrationNo = value;
-               
             }
+            
         }
 
 
@@ -91,10 +103,10 @@ namespace MockExamProgBrushUp_ASW
         public Car(String registreringsNummer)
         {
            // int doors, String model,
-             doors = 2;
+            doors = 2;
             model = "Volvo";
             this.RegistrationNo = registreringsNummer;
-            GetRegistrationNo();
+            //GetRegistrationNo();
         }
 
         /// <summary>
@@ -141,26 +153,26 @@ namespace MockExamProgBrushUp_ASW
             }
         }
 
-        public String GetRegistrationNo()
-        {
-            if(RegistrationNo.Length == 7)
-            {
-                return RegistrationNo;
-            }
-            else
-            {
-                throw new ArgumentException("Registreringnummeret skal være på 7 tegn.");
-            }
-        }
+        //public String GetRegistrationNo()
+        //{
+        //    if (RegistrationNo.Length == 7)
+        //    {
+        //        return RegistrationNo;
+        //    }
+        //    else
+        //    {
+        //        throw new ArgumentException("Registreringnummeret skal være på 7 tegn.");
+        //    }
+        //}
 
-        
+
 
 
         #endregion
 
         public override string ToString()
         {
-            return Doors + Model + RegistrationNo;
+            return "Antal døre: " + Doors + " BilModellen: " + Model + " Registreringsnummer: "+ RegistrationNo;
         }
     }
 }

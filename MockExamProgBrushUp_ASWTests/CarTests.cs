@@ -138,18 +138,18 @@ namespace MockExamProgBrushUp_ASW.Tests
         //{
         //    //Arrange
 
-        //    var car = new Car(2, "Volvo", "1234567");
+        //    var car = new Car("1234567");
 
         //    //Act 
 
-        //    int doors = car.GetDoors();
-        //    String model = car.GetModel();
+        //    //int doors = car.GetDoors();
+        //    //String model = car.GetModel();
         //    String regNo = car.GetRegistrationNo();
 
         //    //Assert
 
-        //    Assert.AreEqual(2, doors);
-        //    Assert.AreEqual("Volvo", model);
+        //    //Assert.AreEqual(2, doors);
+        //    //Assert.AreEqual("Volvo", model);
         //    Assert.AreEqual("1234567", regNo);
         //}
 
@@ -160,18 +160,18 @@ namespace MockExamProgBrushUp_ASW.Tests
         //{
         //    //Arrange 
 
-        //    var car = new Car(1, "", "12345");
+        //    var car = new Car("12345");
 
         //    //Act
 
-        //    int doors = car.GetDoors();
-        //    String model = car.GetModel();
+        //    //int doors = car.GetDoors();
+        //    //String model = car.GetModel();
         //    String regNo = car.GetRegistrationNo();
 
         //}
 
         #endregion
 
-      
+
     }
 }
