@@ -54,7 +54,7 @@ namespace MockExamProgBrushUp_ASW
         /// </summary>
         public Car()
         {
-            GetRegistrationNo();
+            
             
         }
 
@@ -66,6 +66,7 @@ namespace MockExamProgBrushUp_ASW
         public Car(int doors)
         {
             this.Doors = doors;
+            GetDoors();
         }
 
         /// <summary>
@@ -76,8 +77,9 @@ namespace MockExamProgBrushUp_ASW
 
         public Car(int doors,String model)
         {
-            this.Doors = doors;
+            this.Doors = 2;
             this.Model = model;
+            GetModel();
         }
 
         /// <summary>
@@ -88,8 +90,8 @@ namespace MockExamProgBrushUp_ASW
 
         public Car(int doors,String model,String registreringsNummer)
         {
-            this.Doors = doors;
-            this.Model = model;
+            this.Doors = 2;
+            this.Model = "Volvo";
             this.RegistrationNo = registreringsNummer;
             GetRegistrationNo();
         }

@@ -100,7 +100,7 @@ namespace MockExamProgBrushUp_ASW.Tests
         {
             //Arrange
 
-            var car = new Car(4, "Volvo");
+            var car = new Car(2, "Volvo");
 
             //Act
 
@@ -109,7 +109,7 @@ namespace MockExamProgBrushUp_ASW.Tests
 
             //Assert
 
-            Assert.AreEqual(4, doors);
+            Assert.AreEqual(2, doors);
             Assert.AreEqual("Volvo", model);
         }
 
