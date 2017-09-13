@@ -88,10 +88,11 @@ namespace MockExamProgBrushUp_ASW
         /// <returns></returns>
         /// 
 
-        public Car(int doors,String model,String registreringsNummer)
+        public Car(String registreringsNummer)
         {
-            this.Doors = 2;
-            this.Model = "Volvo";
+           // int doors, String model,
+             doors = 2;
+            model = "Volvo";
             this.RegistrationNo = registreringsNummer;
             GetRegistrationNo();
         }

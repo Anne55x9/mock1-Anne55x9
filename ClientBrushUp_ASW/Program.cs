@@ -12,7 +12,9 @@ namespace ClientBrushUp_ASW
     {
         static void Main(string[] args)
         {
-            var car = new Car(2,"Volvo","1234567");
+            var car = new Car("123456");
+
+            //var car1 = new Car();   
 
            // car.GetRegistrationNo();
             Console.WriteLine(car.ToString());
