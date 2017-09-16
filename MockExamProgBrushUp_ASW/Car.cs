@@ -75,17 +75,6 @@ namespace MockExamProgBrushUp_ASW
         }
 
         /// <summary>
-        /// Overloaded konstruktor med en  parameter døre.
-        /// </summary>
-        /// <returns></returns>
-
-        public Car(int doors)
-        {
-            this.Doors = doors;
-            GetDoors();
-        }
-
-        /// <summary>
         /// overloaded konstruktor med 2  parametre døre og model.
         /// </summary>
         /// <returns></returns>
@@ -93,8 +82,9 @@ namespace MockExamProgBrushUp_ASW
 
         public Car(int doors,String model)
         {
-            this.Doors = 2;
+            this.Doors = doors;
             this.Model = model;
+            GetDoors();
             GetModel();
         }
 
@@ -132,7 +122,7 @@ namespace MockExamProgBrushUp_ASW
 
         #region Metoder til at begrænse input i systemet.
 
-        private int GetDoors()
+        public int GetDoors()
         {
             if (Doors >= 2 && Doors <= 5)
             {
@@ -145,7 +135,7 @@ namespace MockExamProgBrushUp_ASW
         }
         
 
-        private String GetModel()
+        public String GetModel()
         {
             if(Model.Length != 0)
             {
@@ -153,11 +143,11 @@ namespace MockExamProgBrushUp_ASW
             }
             else
             {
-                throw new ArgumentException("Modellen navnet må ikke være tomt.");
+                throw new NullReferenceException("Modellen navnet må ikke være tomt.");
             }
         }
 
-        private String GetRegistrationNo()
+        public String GetRegistrationNo()
         {
             if (RegistrationNo.Length == 7)
             {

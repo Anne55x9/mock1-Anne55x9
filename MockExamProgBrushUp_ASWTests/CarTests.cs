@@ -18,7 +18,7 @@ namespace MockExamProgBrushUp_ASW.Tests
         {
             //Arrange
 
-            var car = new Car(2);
+            var car = new Car(2,"volvo");
 
             //Act 
 
@@ -29,37 +29,6 @@ namespace MockExamProgBrushUp_ASW.Tests
             Assert.AreEqual(2, doors);
         }
 
-        [TestMethod()]
-        public void GetDoorsTest5()
-        {
-            //Arrange
-
-            var car = new Car(5);
-
-            //Act 
-
-            int doors = car.GetDoors();
-
-            //Assert
-
-            Assert.AreEqual(5, doors);
-        }
-
-        [TestMethod()]
-        public void GetDoorsTest4()
-        {
-            //Arrange
-
-            var car = new Car(4);
-
-            //Act 
-
-            int doors = car.GetDoors();
-
-            //Assert
-
-            Assert.AreEqual(4, doors);
-        }
 
         [TestMethod()]
 
@@ -68,7 +37,7 @@ namespace MockExamProgBrushUp_ASW.Tests
         {
             //Arrange 
 
-            var car = new Car(1);
+            var car = new Car(1,"volvo");
 
             //Act
 
@@ -83,7 +52,7 @@ namespace MockExamProgBrushUp_ASW.Tests
         {
             //Arrange 
 
-            var car = new Car(6);
+            var car = new Car(6,"volvo");
 
             //Act
 
@@ -115,16 +84,16 @@ namespace MockExamProgBrushUp_ASW.Tests
 
         [TestMethod()]
 
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(NullReferenceException))]
         public void GetModelNullPlusDoors1()
         {
             //Arrange 
 
-            var car = new Car(1, "");
+            var car = new Car(2, "");
 
             //Act
 
-            int doors = car.GetDoors();
+            //int doors = car.GetDoors();
             String model = car.GetModel();
 
         }

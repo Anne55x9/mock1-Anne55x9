@@ -14,9 +14,7 @@ namespace ClientBrushUp_ASW
         {
             var car = new Car("1234567");
 
-            //var car1 = new Car();   
-
-           // car.GetRegistrationNo();
+            
             Console.WriteLine(car.ToString());
           
 
