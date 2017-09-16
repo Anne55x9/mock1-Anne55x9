@@ -11,9 +11,9 @@ namespace MockExamProgBrushUp_ASW
 
         #region Full properties til klassen Car med privat instance felter og public metode.
 
-       
 
         public ColorEnum Color { get; set; }
+        public Owner Owner { get; set; }
 
 
         private int doors;
@@ -42,20 +42,11 @@ namespace MockExamProgBrushUp_ASW
                     return registrationNo;
  
             }
-            set
+            private set
             {
-
-                //try
-                //{
-                //    Car car = new Car();
-                //    GetRegistrationNo();
-                    registrationNo = value;
-                //}
-                //catch(ArgumentException)
-                //{
-                //    Console.WriteLine("No");
-                //}
-                
+   
+                registrationNo= value;
+  
             }
             
         }
