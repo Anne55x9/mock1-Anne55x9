@@ -38,20 +38,24 @@ namespace MockExamProgBrushUp_ASW
         {
             get
             {
-
-                if (registrationNo.Length == 7)
-                {
+   
                     return registrationNo;
-                }
-                else
-                {
-
-                    throw new ArgumentException("Registreringnummeret skal være på 7 tegn.");
-                }
+ 
             }
             set
             {
-                registrationNo = value;
+
+                //try
+                //{
+                //    Car car = new Car();
+                //    GetRegistrationNo();
+                    registrationNo = value;
+                //}
+                //catch(ArgumentException)
+                //{
+                //    Console.WriteLine("No");
+                //}
+                
             }
             
         }
@@ -106,7 +110,7 @@ namespace MockExamProgBrushUp_ASW
             doors = 2;
             model = "Volvo";
             this.RegistrationNo = registreringsNummer;
-            //GetRegistrationNo();
+            GetRegistrationNo();
         }
 
         /// <summary>
@@ -128,7 +132,7 @@ namespace MockExamProgBrushUp_ASW
 
         #region Metoder til at begrænse input i systemet.
 
-        public int GetDoors()
+        private int GetDoors()
         {
             if (Doors >= 2 && Doors <= 5)
             {
@@ -141,7 +145,7 @@ namespace MockExamProgBrushUp_ASW
         }
         
 
-        public String GetModel()
+        private String GetModel()
         {
             if(Model.Length != 0)
             {
@@ -153,17 +157,17 @@ namespace MockExamProgBrushUp_ASW
             }
         }
 
-        //public String GetRegistrationNo()
-        //{
-        //    if (RegistrationNo.Length == 7)
-        //    {
-        //        return RegistrationNo;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Registreringnummeret skal være på 7 tegn.");
-        //    }
-        //}
+        private String GetRegistrationNo()
+        {
+            if (RegistrationNo.Length == 7)
+            {
+                return RegistrationNo;
+            }
+            else
+            {
+                throw new ArgumentException("Registreringnummeret skal være på 7 tegn.");
+            }
+        }
 
 
 
