@@ -134,6 +134,10 @@ namespace MockExamProgBrushUp_ASW
             }
         }
         
+        /// <summary>
+        /// Indsat en nullreferenceexception istedet for argument da propertien ikke må være null.
+        /// </summary>
+        /// <returns></returns>
 
         public String GetModel()
         {
