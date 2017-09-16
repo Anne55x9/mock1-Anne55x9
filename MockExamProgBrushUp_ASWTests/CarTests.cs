@@ -13,6 +13,7 @@ namespace MockExamProgBrushUp_ASW.Tests
     {
         #region Test til doors metoden mht antal døre i bilen. 
 
+
         [TestMethod()]
         public void GetDoorsTest2()
         {
