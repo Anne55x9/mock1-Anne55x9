@@ -8,6 +8,11 @@ namespace MockExamProgBrushUp_ASW
 {
     public class Car
     {
+        /// <summary>
+        /// KLasen har indeholder properties som har begrænsninger når de sættes. 
+        ///De forskellige properties er full props og bruges i metoderne i klassen.  
+        ///
+        /// </summary>
 
         #region Full properties til klassen Car med privat instance felter og public metode.
 
@@ -107,6 +112,9 @@ namespace MockExamProgBrushUp_ASW
             this.RegistrationNo = registreringsNummer;
             
             this.Color = color;
+            
+
+            
         }
 
         #endregion

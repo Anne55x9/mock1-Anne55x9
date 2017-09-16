@@ -7,7 +7,15 @@ using System.Threading.Tasks;
 namespace MockExamProgBrushUp_ASW
 {
     public class Owner
+
     {
+
+        /// <summary>
+        /// KLasen har indeholder properties som har begrænsninger når de sættes. 
+        ///De forskellige properties er full props og bruges i metoderne i klassen.  
+        ///
+        /// </summary>
+
         #region Full properties til klassen Owner med privat instance felter og public metode.
 
         private String address;
@@ -46,31 +54,7 @@ namespace MockExamProgBrushUp_ASW
 
         }
 
-        /// <summary>
-        /// Overloaded konstruktor med en parameter Adresse.
-        /// </summary>
-        /// <param name="address"></param>
 
-        public Owner(String address)
-        {
-            this.Address = address;
-            
-        }
-
-        /// <summary>
-        ///  Overloaded konstruktor med parametrene adresse og navn.
-        ///  Jeg har valgt at udvide konstruktoren fremfor at ænsre på den overnfor.
-        ///  Dette gøres for ikke at skulle tilbage og rette i test undervejs. 
-        /// </summary>
-        /// <param name="address"></param>
-        /// <param name="name"></param>
-
-
-        public Owner(String address, String name)
-        {
-            this.Address = address;
-            this.Name = name;
-        }
 
         /// <summary>
         /// Ny overloaded konstruktor med parametrene adresse, navn og endelig telefon.

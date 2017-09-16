@@ -93,51 +93,17 @@ namespace MockExamProgBrushUp_ASW.Tests
 
             //Act
 
-            //int doors = car.GetDoors();
+         
             String model = car.GetModel();
 
         }
 
+    
         #endregion
 
         #region Test til registreringNummer metoden mht nummeret skal være 7. Plus parametre døre og model.
 
-        //[TestMethod()]
-        //public void GetRegistrationNoTest7Doors2ModelNotNull()
-        //{
-        //    //Arrange
 
-        //    var car = new Car("1234567");
-
-        //    //Act 
-
-        //    //int doors = car.GetDoors();
-        //    //String model = car.GetModel();
-        //    String regNo = car.GetRegistrationNo();
-
-        //    //Assert
-
-        //    //Assert.AreEqual(2, doors);
-        //    //Assert.AreEqual("Volvo", model);
-        //    Assert.AreEqual("1234567", regNo);
-        //}
-
-        //[TestMethod()]
-
-        //[ExpectedException(typeof(ArgumentException))]
-        //public void GetMRegNoNot7Door1ModelNull()
-        //{
-        //    //Arrange 
-
-        //    var car = new Car("12345");
-
-        //    //Act
-
-        //    //int doors = car.GetDoors();
-        //    //String model = car.GetModel();
-        //    String regNo = car.GetRegistrationNo();
-
-        //}
 
         #endregion
 

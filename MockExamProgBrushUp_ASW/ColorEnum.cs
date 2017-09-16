@@ -9,6 +9,8 @@ namespace MockExamProgBrushUp_ASW
     public class ColorEnum
     {
 
+        ///Klasse enumColor med en enum bestående af farver i color propen. 
+
 /// <summary>
 /// Property af typen enum med de farver som systemet tillader. 
 /// </summary>
@@ -22,7 +24,10 @@ namespace MockExamProgBrushUp_ASW
             Blue
         }
 
-     
+        public ColorEnum()
+        {
+            
+        }
 
 
         public void GetColor (Color color)
