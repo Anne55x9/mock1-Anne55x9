@@ -49,10 +49,18 @@ namespace MockExamProgBrushUp_ASW
             }
             private set
             {
-   
-                registrationNo= value;
-  
-            }
+                try
+                {
+                    registrationNo = value;
+                    GetRegistrationNo();
+                }
+                catch(ArgumentException)
+                {
+                    Console.WriteLine("RegNr skal være på 7 tegn!");
+                }
+
+
+}
             
         }
 
@@ -96,7 +104,8 @@ namespace MockExamProgBrushUp_ASW
             doors = 2;
             model = "Volvo";
             this.RegistrationNo = registreringsNummer;
-            GetRegistrationNo();
+            
+ 
         }
 
         /// <summary>

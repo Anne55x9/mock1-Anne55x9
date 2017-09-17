@@ -12,10 +12,10 @@ namespace ClientBrushUp_ASW
     {
         static void Main(string[] args)
         {
-            var car = new Car("1234567");
+            var car = new Car("123456");
 
             
-            Console.WriteLine(car.ToString());
+            Console.WriteLine(car);
           
 
             Console.ReadLine();
