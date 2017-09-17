@@ -26,7 +26,7 @@ namespace MockExamProgBrushUp_ASW
         public int Doors
         {
             get { return doors; }
-            set { doors = value; }
+            private set { doors = value; }
         }
 
         private String model;
@@ -34,7 +34,7 @@ namespace MockExamProgBrushUp_ASW
         public String Model
         {
             get { return model; }
-            set { model = value; }
+            private set { model = value; }
         }
 
         private String registrationNo;
@@ -69,14 +69,6 @@ namespace MockExamProgBrushUp_ASW
 
         #region Klassens forskellige konstruktører, default og 4 overloadede så test ikke skal ændres på undervejs i kodningen.
 
-        /// <summary>
-        /// Default konstruktor. 
-        /// </summary>
-        public Car()
-        {
-            
-            
-        }
 
         /// <summary>
         /// overloaded konstruktor med 2  parametre døre og model.
@@ -108,23 +100,6 @@ namespace MockExamProgBrushUp_ASW
  
         }
 
-        /// <summary>
-        /// overloaded konstruktor med 4 parametre 
-        /// </summary>
-        /// <returns></returns>
-        /// 
-
-        public Car(int doors, String model, String registreringsNummer,ColorEnum color)
-        {
-            this.Doors = doors;
-            this.Model = model;
-            this.RegistrationNo = registreringsNummer;
-            
-            this.Color = color;
-            
-
-            
-        }
 
         #endregion
 
@@ -170,8 +145,6 @@ namespace MockExamProgBrushUp_ASW
                 throw new ArgumentException("Registreringnummeret skal være på 7 tegn.");
             }
         }
-
-
 
 
         #endregion

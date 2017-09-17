@@ -49,8 +49,7 @@ namespace MockExamProgBrushUp_ASW.Tests
             //Act
 
             String adresse = owner.GetAddress();
-            String navn = owner.GetName();
-            String phone = owner.GetPhone();
+           
 
         }
 
@@ -66,8 +65,7 @@ namespace MockExamProgBrushUp_ASW.Tests
             //Act
 
             String adresse = owner.GetAddress();
-            String navn = owner.GetName();
-            String phone = owner.GetPhone();
+           
 
         }
 

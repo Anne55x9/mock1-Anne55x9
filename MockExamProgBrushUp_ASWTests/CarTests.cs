@@ -19,7 +19,7 @@ namespace MockExamProgBrushUp_ASW.Tests
         {
             //Arrange
 
-            var car = new Car(2,"volvo");
+            var car = new Car(2, "volvo");
 
             //Act 
 
@@ -38,11 +38,12 @@ namespace MockExamProgBrushUp_ASW.Tests
         {
             //Arrange 
 
-            var car = new Car(1,"volvo");
+            var car = new Car(1, "volvo");
 
             //Act
 
             int doors = car.GetDoors();
+
 
         }
 
@@ -53,11 +54,12 @@ namespace MockExamProgBrushUp_ASW.Tests
         {
             //Arrange 
 
-            var car = new Car(6,"volvo");
+            var car = new Car(6, "volvo");
 
             //Act
 
             int doors = car.GetDoors();
+
 
         }
 
@@ -94,20 +96,51 @@ namespace MockExamProgBrushUp_ASW.Tests
 
             //Act
 
-         
             String model = car.GetModel();
 
         }
 
-    
+
+
         #endregion
 
         #region Test til registreringNummer metoden mht nummeret skal være 7. Plus parametre døre og model.
 
+        [TestMethod()]
+        public void Getregnr7()
+        {
+            //Arrange
+
+            var car = new Car("1234567");
+
+            //Act
+
+            string regNr = car.GetRegistrationNo();
+
+            //Assert
+
+
+            Assert.AreEqual("1234567", regNr);
+        }
+
+        [TestMethod()]
+
+        [ExpectedException(typeof(ArgumentException))]
+        public void GeregNrNot7()
+        {
+            //Arrange 
+
+            var car = new Car("123456");
+
+            //Act
+
+            String regNr = car.GetRegistrationNo();
+
+        }
 
 
         #endregion
 
-
+   
     }
 }

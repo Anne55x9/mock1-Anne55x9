@@ -28,20 +28,6 @@ namespace MockExamProgBrushUp_ASW
         {
             
         }
-
-
-        public void GetColor (Color color)
-        {
-            if (color == Color.Black || color == Color.Blue || color == Color.Gray || color == Color.Green || color == Color.Red || color == Color.Red)
-            {
-                var col = color.ToString();
-                Console.WriteLine(col);
-            }
-            else
-            {
-                throw new ArgumentException();
-            }
-        }
             
 
     }

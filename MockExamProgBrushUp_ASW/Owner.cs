@@ -46,14 +46,6 @@ namespace MockExamProgBrushUp_ASW
 
         #region Klassens forskellige konstruktører, default og 3 overloadede så test ikke skal ændres på undervejs i kodningen.
 
-        /// <summary>
-        /// Default konstroktor.
-        /// </summary>
-        public Owner()
-        {
-
-        }
-
 
 
         /// <summary>
