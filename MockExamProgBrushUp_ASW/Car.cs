@@ -51,6 +51,7 @@ namespace MockExamProgBrushUp_ASW
             {
                 try
                 {
+                   
                     registrationNo = value;
                     GetRegistrationNo();
                 }
@@ -136,9 +137,9 @@ namespace MockExamProgBrushUp_ASW
 
         public String GetRegistrationNo()
         {
-            if (RegistrationNo.Length == 7)
+            if (registrationNo.Length == 7)
             {
-                return RegistrationNo;
+                return registrationNo;
             }
             else
             {
