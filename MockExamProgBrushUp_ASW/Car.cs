@@ -30,6 +30,7 @@ namespace MockExamProgBrushUp_ASW
             private set
             {
                 try
+
                 {
                     doors = value;
                     GetDoors();
