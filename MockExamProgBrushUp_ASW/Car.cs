@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,7 +27,24 @@ namespace MockExamProgBrushUp_ASW
         public int Doors
         {
             get { return doors; }
-            private set { doors = value; }
+            private set
+            {
+                try
+                {
+                    doors = value;
+                    GetDoors();
+
+                }
+                catch (ArgumentException)
+                {
+                    value = 0;
+                    doors = value;
+                    Console.WriteLine("Døre er mellem 2 og 5!");
+                }
+
+
+                
+            }
         }
 
         private String model;
@@ -34,7 +52,20 @@ namespace MockExamProgBrushUp_ASW
         public String Model
         {
             get { return model; }
-            private set { model = value; }
+            private set
+            {
+                try
+                {
+                    model = value;
+                    GetModel();
+                }
+                catch (NullReferenceException)
+                {
+                    value = null;
+                    model = value;
+                    Console.WriteLine("Model må ikke være null!");
+                }
+            }
         }
 
         private String registrationNo;
@@ -43,26 +74,24 @@ namespace MockExamProgBrushUp_ASW
         {
             get
             {
-   
                     return registrationNo;
- 
             }
             private set
             {
                 try
                 {
-                   
                     registrationNo = value;
                     GetRegistrationNo();
+                    
                 }
                 catch(ArgumentException)
                 {
+                    value = null;
+                    registrationNo = value;
                     Console.WriteLine("RegNr skal være på 7 tegn!");
                 }
-
-
-}
-            
+                
+            }
         }
 
 
@@ -77,12 +106,11 @@ namespace MockExamProgBrushUp_ASW
         /// <returns></returns>
         /// 
 
-        public Car(int doors,String model)
+        public Car(int doors, String model)
         {
             this.Doors = doors;
             this.Model = model;
-            GetDoors();
-            GetModel();
+            
         }
 
         /// <summary>
@@ -137,11 +165,12 @@ namespace MockExamProgBrushUp_ASW
 
         public String GetRegistrationNo()
         {
+           
             if (registrationNo.Length == 7)
             {
                 return registrationNo;
             }
-            else
+            else 
             {
                 throw new ArgumentException("Registreringnummeret skal være på 7 tegn.");
             }

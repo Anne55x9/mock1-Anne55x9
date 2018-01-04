@@ -14,14 +14,15 @@ namespace ClientBrushUp_ASW
         {
             var car = new Car("123456");
 
-            
             Console.WriteLine(car);
-          
 
+            var car2 = new Car(40, "");
+
+            Console.WriteLine(car2);
+
+          
             Console.ReadLine();
 
-
-           
         }
     }
 }
